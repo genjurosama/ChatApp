@@ -53,11 +53,20 @@ Template.profile.events({
 });
 
 Template.profileEdit.events({
-    'click #avatar': function (e) {
-        console.log("avatar clicked");
+    'click #avatar': function () {
         e.preventDefault();
+        console.log("avatar clicked");
         $('#editYourAvatarModal').modal();
     },
+  'input':_.debounce(function(e) {
+      updateProfil(e);
+   },1000)
+  ,
+  //Form submition event to update the user information
+  'submit form': function(e) {
+    console.log("submit")
+    updateProfil(e);
+  },
     'click #genApi':function(e) {
       e.preventDefault();
       apiKey = generateUUID();
