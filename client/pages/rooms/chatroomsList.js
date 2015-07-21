@@ -6,7 +6,7 @@ Template.chatroomsList.events({
     e.preventDefault();
     console.log($("#roomName").val());
     roomName = $("#roomName").val();
-    Chatrooms.insert({name:roomName,createdBy:Meteor.userId()});
+    Chatrooms.insert({name:roomName,createdBy:Meteor.userId(),author:Meteor.user().profile.name});
     $("#roomName").val("");
   }
 });
@@ -30,7 +30,7 @@ Template.chat.events({
   "click #sendMessage": function (e){
     message = $("#message").val();
     console.log(message);
-    Messages.insert({text:message,uid:Meteor.userId,roomId:this._id})
+    Messages.insert({text:message,uid:Meteor.userId,roomId:this._id,createdBy:Meteor.userId(),author:Meteor.user().profile.name})
 
   }
 });
