@@ -1,0 +1,18 @@
+.panel.panel-default
+  .panel-heading
+    h3.panel-title 2. Create an account.
+  .panel-body
+    p Use the create an account option to create your account, this may
+      | require payment during this time depending the product you are
+      | trying to access. 
+    form#sign-up-form(role="form")
+      .form-group
+        label() Name
+        input(type="text" name="name" class="form-control" placeholder="Enter your name")
+      .form-group
+        label() Email
+        input(type="email" name="email" class="form-control" placeholder="Enter your email")
+      .form-group
+        label() Password
+        input(type="password" name="pass" class="form-control" placeholder="Enter your password")
+      button.btn.btn-signup.btn-success.btn-block(type='submit')  Sign Up

@@ -1,0 +1,101 @@
+<template name="profileEdit">
+
+ {{#with currentUser.profile}}
+ <div class="container">
+  <div class="row">
+    <div id="editprofilform" class="col-md-6 col-md-offset-3">
+      <form class='form'>
+
+        <div class="form-group" {{errorClass 'firstname'}}>
+          <fieldset data-role="controlgroup">
+            <label for="firstname">Firstname
+              <input id="firstname" type="text" value="{{firstname}}" placeholder="" name="firstname" class="form-control"/>
+              <span class="help-block">{{errorMessage 'firstname'}}</span>
+            </label>
+          </fieldset>
+        </div>
+        <div class="form-group" {{errorClass 'lastname'}}>
+          <fieldset data-role="controlgroup">
+            <label for="lastname">Lastname
+              <input id="lastname" type="text" value="{{lastname}}" placeholder="" name="lastname" class="form-control"/>
+              <span class="help-block">{{errorMessage 'lastname'}}</span>
+
+            </label>
+          </fieldset>
+        </div>
+        <div class="form-group" {{errorClass 'picture'}} >
+          <fieldset data-role="controlgroup">
+            <label for="picture">Picture
+                <img class="img-circle profile-image" src="{{image}}" /> <button id="avatar" > avatar</button>
+
+              <span class="help-block">{{errorMessage 'picture'}}</span>
+
+
+
+            </label>
+          </fieldset>
+        </div>
+        <div class="form-group" {{errorClass 'gender'}}>
+          <fieldset data-role="controlgroup">
+            <label for="gender">Gender</label>
+            <select name="gender" id="genderDropdown" class="form-control genderDropdown" value={{gender}}>
+              <option value="male">male</option>
+              <option value="female">female</option>
+            </select>
+            <span class="help-block">{{errorMessage 'gender'}}</span>
+          </fieldset>
+        </div>
+        <div class="form-group" {{errorClass 'billingadress'}}>
+          <fieldset data-role="controlgroup">
+            <label for="billingadress">Billing adress
+              <textarea id="billingadress" type="text"  size="50" value="{{billingadress}}" placeholder="" name="billingadress" class="form-control"></textarea>
+              <span class="help-block">{{errorMessage 'billingadress'}}</span>
+
+            </label>
+          </fieldset>
+        </div>
+        <div class="form-group" {{errorClass 'mailingadress'}}>
+          <fieldset data-role="controlgroup">
+            <label for="mailingadress">Mailing adress
+              <textarea id="mailingadress" size="50" type="text" value="{{mailingadress}}" placeholder="" name="mailingadress" class="form-control"></textarea>
+              <span class="help-block">{{errorMessage 'mailingadress'}}</span>
+
+            </label>
+          </fieldset>
+        </div>
+        <div class="form-group" {{errorClass 'phone'}}>
+          <fieldset data-role="controlgroup">
+            <label for="phone">Phone
+              <input id="phone" type="text" value="{{phone}}" placeholder="" name="phone" class="form-control"/>
+              <span class="help-block">{{errorMessage 'phone'}}</span>
+
+            </label>
+          </fieldset>
+        </div>
+        <div class="form-group" {{errorClass 'skypeaccount'}}>
+          <fieldset data-role="controlgroup">
+            <label for="skypeaccount">Skype account
+              <input id="skypeaccount" type="text" value="{{skypeaccount}}" placeholder="" name="skypeaccount" class="form-control"/>
+              <span class="help-block">{{errorMessage 'skypeaccount'}}</span>
+
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-group" {{errorClass 'skypeaccount'}}>
+          <fieldset data-role="controlgroup">
+            <label for="skypeaccount">API key
+              <input id="apiKey" type="text" value="{{apiKey}}" placeholder="" name="apiKey" class="form-control" disabled/>
+              <button id="genApi" class="btn btn-primary" > Generate</button>
+            </label>
+          </fieldset>
+        </div>
+       <div class="form-group">
+          <input type="submit" value="Save" data-transition="fade" data-theme="c" class="btn btn-primary"/>
+        </div>
+      </form>
+    </div>
+   </div>
+  </div>
+  {{/with}}
+</template>

@@ -1,0 +1,17 @@
+
++contentFor "title"
+  h1 Dashboard
+  | Welcome {{myUserName}}
++contentFor "breadcrubms"
+  li.active
+    a(href="{{pathFor 'index'}}") Dashboard
+
+.row
+    .col-md-12.col-lg-12
+        .panel.panel-default
+            .panel-heading
+                h3.panel-title Greetings
+            .panel-body.server-chart
+                .row
+                    .col-md-12.col-lg-12
+                        p  Welcome to chat app

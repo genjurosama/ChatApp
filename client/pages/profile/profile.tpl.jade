@@ -1,0 +1,24 @@
++contentFor "title"
+   h1 My Profile
++contentFor "breadcrubms"
+   li.active
+      a(href="{{pathFor 'profile'}}") Profile
+.col-sm-offset-2.col-sm-8
+   +autoForm(collection="Meteor.users" id="profileForm" doc=userProfile type="update")
+      +afQuickField name='profile.name'
+      +afQuickField name='emails'
+      +afQuickField name='profile.lastname'
+      +afQuickField name='profile.firstname'
+      +afQuickField name='profile.middlename'
+      +afQuickField name='profile.phone'
+      +afQuickField name='profile.phone2'
+      +afQuickField name='profile.address'
+      +afQuickField name='profile.address2'
+      +afQuickField name='profile.birthday'
+      +afQuickField name='profile.city'
+      +afQuickField name='profile.zip'
+
+      //+afQuickField name='password' type="password" autocomplete="off"
+      //+afQuickField name='passwordConfirmation' type="password" autocomplete="off"
+      button.btn.btn-block.btn-primary(type="submit")
+         | Save Changes

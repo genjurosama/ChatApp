@@ -1,0 +1,15 @@
+aside.sidebar.sidebar-left
+   if currentUser
+      div.sidebar-profile.profile
+         div.avatar
+            img.img-circle.profile-image(src="{{currentUser.profile.image}}" alt="profile")
+            i.on.border-dark.animated.bounceIn
+         div.profile-body.dropdown
+            a.dropdown-toggle(href="javascript:void(0);" data-toggle="dropdown" aria-expanded="false")
+               h4 {{currentUser.profile.name}}
+                  span.caret
+            small.title
+               b {{totalCount}}
+               | connections
+            +profileMenu
+   +navigation

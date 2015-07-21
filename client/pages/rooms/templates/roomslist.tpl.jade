@@ -1,0 +1,14 @@
+each rooms
+   .panel.panel-primary
+      .panel-heading
+         h3.panel-title {{name}}
+         .actions.pull-right
+            button#accessRoom.btn.btn-primary.btn-xs.btn-edit-user
+               i.fa.fa-users
+            button#deleteRoom.btn.btn-danger.btn-xs.btn-delete-user
+               i.fa.fa-remove
+      .panel-body
+         .col-md-6
+            | {{name}}
+         .col-md-6
+

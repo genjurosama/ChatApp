@@ -1,0 +1,19 @@
+.panel-heading
+  h3.panel-title 1. Sign into your existing account.
+.panel-body
+  form#log-in-form.form-horizontal(fole="form")
+    .form-group
+      .col-md-12
+        input#email(type="email" name="email" class="form-control" placeholder="Enter your email")
+        i.fa.fa-user
+    .form-group
+      .col-md-12
+        input#password(type="password" name="pass" class="form-control" placeholder="Enter your password")
+        i.fa.fa-lock
+    .form-group
+      .col-md-12
+        button.btn.btn-success.btn-block(type="submit")  Sign In
+    p If you have forgot your account details you can use the password
+      | reset options under the login buttons.
+    p Don’t worry it happens to us all.  
+    a.btn.btn-warning.btn-block.btn-reset-password() Reset Password

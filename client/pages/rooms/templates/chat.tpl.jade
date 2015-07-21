@@ -1,0 +1,26 @@
+
+.col-md-12
+    .panel.panel-default.chat-widget
+        .panel-heading
+            h3.panel-title chat
+            .actions.pull-right
+        .panel-body
+           each messages
+              .row.wrapper.animated.fadeInRight
+              .col-xs-2.col-sm-2.col-md-2
+                 span.avatar
+                    img.img-circle(src='{{currentUser.profile.image}}', alt='')
+                    i.on.animated.bounceIn
+              .col-xs-10.col-sm-10.col-md-10
+                 .post.default
+                    span.arrow.left
+                    p
+                       | {{text}}
+
+
+            form
+                .input-group
+                    input#message.form-control(type='text', placeholder='Say something')
+                    span.input-group-btn
+                        button#sendMessage.btn.btn-primary(type='button') SEND
+                    

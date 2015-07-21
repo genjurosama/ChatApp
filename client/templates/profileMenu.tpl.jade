@@ -1,0 +1,12 @@
+ul.dropdown-menu(role='menu', style='right: 100px')
+    li
+        a(href="{{pathFor 'profileEdit'}}")
+            span.icon
+                i.fa.fa-user
+            | My Account
+    li.divider
+    li
+        a.logout(href='#')
+            span.icon
+                i.fa.fa-sign-out
+            | Logout

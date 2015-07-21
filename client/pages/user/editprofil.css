@@ -1,0 +1,26 @@
+.genderDropdown{
+  width:25%;
+}
+
+textarea {
+  resize: none;
+}
+
+#editprofilform input[type="text"] , #editprofilform textarea
+{
+    width:200%!important;
+}
+#editprofilform select
+{
+    width:74%!important;
+}
+
+#editprofilform input[type="submit"]{
+    margin: 0;
+    text-align: center;
+    width:25%;
+}
+
+.modal-backdrop {
+    z-index: 1020;
+}

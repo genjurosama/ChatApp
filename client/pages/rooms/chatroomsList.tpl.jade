@@ -1,0 +1,28 @@
++contentFor "title"
+    h1 ChatRooms
++contentFor "breadcrubms"
+    li
+        a(href="{{pathFor 'chatrooms'}}") Chatrooms
+    li.active
+
+
+.container-fluid
+    .row
+        .col-md-6
+            .panel.panel-default
+                .panel-heading
+                    h3.panel-title Room Creation
+                    .actions.pull-right
+                .panel-body
+                    form.form-horizontal(role='form')
+                        .form-group
+                            label.col-sm-2.control-label(for='roomName') Room Name
+                            .col-sm-10
+                                input#roomName.form-control(type='text', placeholder='RoomName')
+
+                        .form-group
+                            .col-sm-offset-2.col-sm-10
+                                button#createRoom.btn.btn-primary(type='submit') Create
+
+    .row
+        +roomslist

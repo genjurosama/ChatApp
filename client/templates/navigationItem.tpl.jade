@@ -1,0 +1,9 @@
+li(class="{{activeRoute}} {{class}}")
+  if path
+    a(href="{{pathFor path}}" title="{{title}}")
+      i(class="fa fa-fw fa-#{icon}")
+      +UI.contentBlock
+  else
+    a(href="{{url}}" target="_blank" title="{{title}}")
+      i(class="fa fa-fw fa-#{icon}")
+      +UI.contentBlock

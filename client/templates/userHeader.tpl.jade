@@ -1,0 +1,14 @@
+header#header
+   // logo start
+   .brand
+      a.logo(href="{{pathFor 'index'}}")
+         i.ion-users(style="font-size:1.2em") MeteorChat
+   // logo end
+   ul.nav.navbar-nav.navbar-left
+      li.toggle-navigation.toggle-left
+         button#toggle-left.sidebar-toggle
+            i.fa.fa-bars
+
+
+   | {{> userBar }}
+
